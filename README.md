@@ -1,20 +1,21 @@
-# AwsSwitch
+# aws-switch
 
-TODO: Write a gem description
+Stores multiple AWS credential sets in a central file, secures them using GPG,
+and easily switches between them using a shell command.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Relies on [ruby-gpgme](https://github.com/ueno/ruby-gpgme) to interface with GPG,
+which relies on [GPGME](https://www.gnupg.org/%28it%29/related_software/gpgme/index.html)
+to compile. On OS X you can install this with homebrew:
 
-```ruby
-gem 'aws_switch'
-```
+    $ brew install gpgme
 
-And then execute:
+If you have trouble compiling the dependency gem, you might have to install it manually via
 
-    $ bundle
+    $ gem install gpgme -- --use-system-libraries
 
-Or install it yourself as:
+Then simply install the gem:
 
     $ gem install aws_switch
 
